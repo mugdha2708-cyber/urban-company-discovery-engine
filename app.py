@@ -30,6 +30,11 @@ Confidence: High, Medium, Low.
 Special rules:
 - A cancellation, no-show, second attempt, reschedule, package visit, redo or warranty visit
   is NOT automatically a qualifying repeat booking.
+- If a customer explicitly mentions previous service/use and says they booked another
+  service, but does not confirm that the new service was completed, classify the
+  repeat_signal as "Prior use mentioned", NOT "Repeat attempt or reschedule".
+- Use "Repeat attempt or reschedule" only when the text describes an attempted booking,
+  failed booking, cancellation or rescheduling without clear evidence of a new booking.
 - A qualifying repeat requires explicit evidence of a later completed new booking within 90 days
   after a completed core-category booking. If not stated, say it is not evidenced.
 - Exclude InstaHelp / quick housekeeping from the core repeat metric.
