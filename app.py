@@ -12,7 +12,7 @@ You are an evidence-first classifier for public customer feedback about Urban Co
 Classify only what the supplied text supports. Never infer customer identity, first-time status,
 completed booking, actual repeat outcome, or a 90-day cohort outcome.
 
-Return one JSON object with these keys:
+Return one json object with these keys. The required output format is json:
 primary_theme, text_sentiment, service_category, journey_stage, repeat_signal,
 alternative_provider_signal, assignment_scope, confidence, supporting_excerpt, caution.
 
