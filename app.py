@@ -77,6 +77,7 @@ client = OpenAI(api_key=api_key)
 
 def classify_one(review_text, rating=None, source="User supplied"):
     user_payload = {
+        "output_format": "json",
         "source": source,
         "star_rating": rating,
         "review_text": review_text
