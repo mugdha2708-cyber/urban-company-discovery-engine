@@ -57,7 +57,7 @@ def classify_one(review_text, rating=None, source="User supplied"):
     response = client.responses.create(
         model=model_name,
         instructions=SYSTEM_PROMPT,
-        input=json.dumps(payload, ensure_ascii=False),
+        input="Classify the supplied customer feedback and return the result as a valid JSON object matching the required schema.\n" + json.dumps(payload, ensure_ascii=False),
         text={"format": {"type": "json_object"}},
         max_output_tokens=550,
     )
